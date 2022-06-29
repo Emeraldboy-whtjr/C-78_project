@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>My Family Book</title>
+
+    </head>
+    <body>
+        <center>
+            <h1>My Family Book</h1>
+            <br>
+            <br>
+            <img id="family_img" src="" height="800" width="800">
+            <br>
+            <h3 id="family_name"></h3>
+            <br>
+            <button onclick="update()">Next</button>
+
+            <script>
+                var family = ["Click on 'Next' to see my family members","Nandalal Roy[my father]","Sampa Roy[my mother]","Aayush Roy[me]"];
+                console.log(family);
+                var image = ["myFamilyBook.jpg","father.jpeg","mother.jpg","child.jpeg"];
+                console.log(image);
+
+                document.getElementById("family_name").innerHTML = family[0];
+                document.getElementById("family_img").src = image[0];
+                var i = 0;
+                function update(){
+                    i++;
+                    console.log(i);
+                    document.getElementById("family_name").innerHTML = family[i];
+                    document.getElementById("family_img").src = image[i];
+                    
+                    if(i == 3){
+                        i = 0;
+                    }
+                    
+                }
+
+            </script>
+        </center>
+    </body>
+</html>
